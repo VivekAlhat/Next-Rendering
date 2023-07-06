@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { getArticlePreview } from "@/utils/helper";
 
-const Article = ({ article, id }) => {
-  const { title, date, content } = article;
+const Article = ({ article }) => {
+  const { title, date, content, id } = article;
   return (
     <article className="border border-gray-300 rounded-md p-4 space-y-1 cursor-pointer">
       <Link href={`/article/${id}`}>

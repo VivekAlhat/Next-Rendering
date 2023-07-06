@@ -3,7 +3,7 @@ import Head from "next/head";
 
 const ArticleDetail = ({ article }) => {
   return (
-    <>
+    <div className="p-24">
       <Head>
         <title>{article.title}</title>
       </Head>
@@ -18,7 +18,7 @@ const ArticleDetail = ({ article }) => {
         <hr />
         <p>{article.content}</p>
       </article>
-    </>
+    </div>
   );
 };
 
@@ -28,6 +28,12 @@ export async function getServerSideProps(context) {
   const articleId = context.params.id;
   const response = await fetch(`http://localhost:5000/posts/${articleId}`);
   const article = await response.json();
+
+  if (response.status === 400) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

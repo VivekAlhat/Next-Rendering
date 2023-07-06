@@ -16,7 +16,10 @@ server.get("/posts", (_, response) => {
 
 server.get("/posts/:id", (request, response) => {
   const { id } = request.params;
-  const article = articles.at(id);
+  const article = articles.filter((entry) => entry.id.toString() === id).at(0);
+  if (article === undefined) {
+    response.status(400).json({ error: "Article not found" });
+  }
   response.status(200).json(article);
 });
 

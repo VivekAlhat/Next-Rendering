@@ -3,7 +3,7 @@ import Article from "@/components/Article";
 
 export default function Home({ articles }) {
   return (
-    <>
+    <div className="p-24">
       <Head>
         <title>John Doe</title>
       </Head>
@@ -20,7 +20,7 @@ export default function Home({ articles }) {
           <Article key={idx} article={article} id={idx} />
         ))}
       </section>
-    </>
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`container mx-auto p-24 min-h-screen ${inter.className}`}>
+    <main className={`container mx-auto min-h-screen ${inter.className}`}>
       <Component {...pageProps} />
     </main>
   );
