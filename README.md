@@ -5,3 +5,6 @@ An example repo containing Next JS rendering example projects
 
 - Server Side Rendering (SSR)
 ![ssr-build](images/blog-ssr-build-inspect.PNG)
+
+- Static Site Generation (SSG)
+![ssg-build](images/blog-ssg-build-inspect.PNG)
