@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import articles from "./articles.json" assert { type: "json" };
 
 const PORT = process.env.PORT || 5000;
 const server = express();
 
 server.use(express.json());
+server.use(cors());
 
 server.get("/", (_, response) => {
   response.status(200).json("Hello World");
