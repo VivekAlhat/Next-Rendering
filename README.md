@@ -12,3 +12,6 @@ An example repo containing Next JS rendering example projects
 
 - Client Side Rendering (`useEffect and useState`)
   ![csr-effect-build](images/blog-csr-effect-build-inspect.PNG)
+
+- Incremental Static Regeneration (ISR)
+  ![isr-build](images/blog-isr-build-inspect.PNG)
